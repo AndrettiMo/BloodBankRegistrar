@@ -9,7 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+  
+    <script src='vista/js/enfermero.js'></script>
 </head>
 <body>
 
@@ -22,9 +23,9 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li><a href="inicio">Inicio</a></li>
-      <li><a href="donante">Proceso de donacion</a></li>
+      <li><a href="donante">Donante</a></li>
       <li><a href="recoleccion">¿Donde estamos ubicados?</a></li>
-      <li><a href="enfermero">Haz tu donacion</a></li>
+      <li><a href="enfermero">Enfermero</a></li>
       <li><a href="informes">Conocenos</a></li>
     </ul>
   </div>

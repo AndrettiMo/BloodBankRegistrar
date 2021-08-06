@@ -19,6 +19,12 @@ class enfermeroControl{
     }
 
 
+    function ctrListarE(){
+        $objRespuesta = enfermeroModelo::mdlListarE();
+        echo json_encode($objRespuesta);
+
+    }
+
 
 }
 
@@ -35,5 +41,11 @@ if(isset($_POST["nombreE"]) && isset($_POST["apellidoE"]) && isset($_POST["tipoE
   $objInsertarE->contrasena = $_POST["contrasena"];
   $objInsertarE->ctrInsertarE();
 
+
+}
+
+if(isset($_POST["listaEnfermero"])){
+$objListarE= new enfermeroControl();
+$objListarE->ctrListarE();
 
 }

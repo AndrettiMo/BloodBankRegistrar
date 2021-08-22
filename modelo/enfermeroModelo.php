@@ -44,18 +44,6 @@ class enfermeroModelo{
     }
 
 
-    public static function mdlListarE(){
-    $objRespuesta = conexion::conectar()->prepare ("SELECT nombreEnfermero,apellidoEnfermero,tipoDocumento,numeroDocumento,fechaNacimiento,telefono FROM enfermero");
-    $objRespuesta->execute();
-    $objListaEnfermero = $objRespuesta->fetchAll();
-    $objRespuesta= null;
-    return $objListaEnfermero;
-
-
-
-
-    }
-
 
 
 

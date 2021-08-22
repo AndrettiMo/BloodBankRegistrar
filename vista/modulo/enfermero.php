@@ -63,54 +63,5 @@
 
 
 
-<div class="col-lg-8">
-
-<h2>Bordered Table</h2>
-  <p>The .table-bordered class adds borders to a table:</p>            
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Tipo de documento</th>
-        <th>Numero de documento</th>
-        <th>Fecha de nacimiento</th>
-        <th>Telefono</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody id="cargarEnfermero">
-      
-    </tbody>
-  </table>
-</div>
-
-</div>
-
-
-
-</div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="editarE" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
   
 </div>

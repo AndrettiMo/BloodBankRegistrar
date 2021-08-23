@@ -5,6 +5,7 @@ include_once "vista/modulo/cabecera.php";
 if (isset($_GET["ruta"])) {
    if ($_GET["ruta"]== "inicio"||
        $_GET["ruta"]== "donante"||
+       $_GET["ruta"]== "bolsaSangre"||
        $_GET["ruta"]== "recoleccion"||
        $_GET["ruta"]== "enfermero"||
        $_GET["ruta"]== "buscar"||

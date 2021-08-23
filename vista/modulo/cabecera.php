@@ -33,6 +33,7 @@
       <li class="active"><a href="#">Home</a></li>
       <li><a href="inicio">Inicio</a></li>
       <li><a href="donante">Donante</a></li>
+      <li><a href="bolsaSangre">Bolsa de sangre</a></li>
       <li><a href="recoleccion">¿Donde estamos ubicados?</a></li>
       <li><a href="enfermero">Enfermero</a></li>
       <li><a href="buscar">Buscar</a></li>

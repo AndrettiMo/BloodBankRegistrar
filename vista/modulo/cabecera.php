@@ -9,11 +9,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+
+    <!-- Libreria DataTables-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
   
     <script src='vista/js/enfermero.js'></script>
+    <script src='vista/js/mostrar.js'></script>
 </head>
 <body>
 
@@ -29,6 +35,7 @@
       <li><a href="donante">Donante</a></li>
       <li><a href="recoleccion">¿Donde estamos ubicados?</a></li>
       <li><a href="enfermero">Enfermero</a></li>
+      <li><a href="buscar">Buscar</a></li>
       <li><a href="informes">Conocenos</a></li>
     </ul>
   </div>

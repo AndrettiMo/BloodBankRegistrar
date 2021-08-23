@@ -7,6 +7,7 @@ if (isset($_GET["ruta"])) {
        $_GET["ruta"]== "donante"||
        $_GET["ruta"]== "recoleccion"||
        $_GET["ruta"]== "enfermero"||
+       $_GET["ruta"]== "buscar"||
        $_GET["ruta"]== "informes") {
      
         include_once "vista/modulo/".$_GET["ruta"].".php";

@@ -1,4 +1,5 @@
 cargarDatosE();
+iniciarTabla();
 
 
 function mostrar(id){
@@ -7,7 +8,8 @@ function mostrar(id){
     
       $("#donante").show();
       $("#enfermero").hide();
-    
+     
+     
     
     }
     
@@ -40,52 +42,47 @@ function cargarDatosE(){
      processData: false,
      success: function(respuesta){
      
-         var interface='';
-         respuesta.forEach(cargarEnfermero);  //llama a la funcion en orden 
+        var dataSet = [];
+        respuesta.forEach(cargarDatos);
 
-        
+        function cargarDatos(item,index){
 
-             function cargarEnfermero(item,index){
+            var objBotones = interface = '<button type="button" class="btn btn-warning" title="Editar" id="btnEditarE" idEnfermero="' + item.idUsuario + '"  nombreUsuario="' + item.nombreUsuario + '" apellidoUsuario="' + item.apellidoUsuario + '" tipoDocumento="' + item.tipoDocumento+ '" numeroDocumento="' + item.numeroDocumento + '" direccion="' + item.direccion + '" telefono="' + item.telefono + '"Email="'+item.Email+'" data-toggle="modal" data-target="#modalEditar"><span class="glyphicon glyphicon-pencil"></span></button>';
+            objBotones += '<button type="button" class="btn btn-danger" title="Eliminar" id="btn-eliminar" idUsuario="' + item.idUsuario + '"><span class="glyphicon glyphicon-remove"></span></button>';
 
-                interface += '<tr>';
+            dataSet.push([item.nombreEnfermero,item.apellidoEnfermero,item.tipoDocumento,item.numeroDocumento,item.fechaNacimiento,item.telefono, objBotones]);
 
-                interface += '<td>' + item.nombreEnfermero + '</td>';
-                interface += '<td>' + item.apellidoEnfermero+ '</td>';
-                interface += '<td>' + item.tipoDocumento+ '</td>';
-                interface += '<td>' + item.numeroDocumento + '</td>';
-                interface += '<td>' + item.fechaNacimiento + '</td>';
-                interface += '<td>' + item.telefono + '</td>';
 
-               
-                interface += '<td>';
-                interface += '<div class="btn-group">';
-                interface += '<button type="button" class="btn btn-warning" title="Editar" id="btnEditarE" idUsuario="' + item.idUsuario + '"  nombreUsuario="' + item.nombreUsuario + '" apellidoUsuario="' + item.apellidoUsuario + '" tipoDocumento="' + item.tipoDocumento+ '" numeroDocumento="' + item.numeroDocumento + '" direccion="' + item.direccion + '" telefono="' + item.telefono + '"Email="'+item.Email+'" data-toggle="modal" data-target="#modalEditar"><span class="glyphicon glyphicon-pencil"></span></button>';
-                interface += '<button type="button" class="btn btn-danger" title="Eliminar" id="btn-eliminar" idUsuario="' + item.idUsuario + '"><span class="glyphicon glyphicon-remove"></span></button>';
-                interface += '</div>';
-                interface += '</td>';
-                interface += '</tr>';
-              
-                $("#cuerpoTablaEnfermero").html(interface);
+        }
+ 
+            
 
-                
-                
-             }
-          
              $('#tablaEnfermero').DataTable({
                        
-               
+                 data:dataSet                  
 
 
 
 
 
-             });
+             })
 
 
      }
 
 
     })
+
+
+    
+
+}
+
+function iniciarTabla(){
+     
+    var tabla = $("#tablaEnfermero").DataTable();
+    tabla.destroy();
+
 
 
 }

@@ -24,6 +24,21 @@ class enfermeroControl{
 
   }
 
+  
+  function ctrEditarE(){
+    $objRespuesta = enfermeroModelo::mdlEditarE($this->idEnfermero,$this->nombre,$this->apellido,$this->tipoDocumento,$this->documento,$this->fecha,$this->telefono);
+
+     echo json_encode($objRespuesta);
+
+
+}
+
+public function ctrEliminarE(){
+
+  $objRespuesta = enfermeroModelo::mdlEliminarE($this -> idEnfermero);
+  echo json_encode ($objRespuesta);
+}
+
 
 
 }
@@ -53,3 +68,29 @@ if(isset($_POST["listaEnfermero"])=="ok"){
   
   
   }
+
+   
+if (isset($_POST["modIdEnfermero"]) && isset($_POST["modNombre"]) && isset($_POST["modApellido"]) &&  isset($_POST["modTipoDocumento"]) && isset($_POST["modDocumento"]) && isset($_POST["modFechaN"]) && isset($_POST["modTelefono"])){
+
+  $objModEnfermero= new enfermeroControl();
+  $objModEnfermero-> idEnfermero = $_POST["modIdEnfermero"];
+  $objModEnfermero-> nombre = $_POST["modNombre"];
+  $objModEnfermero-> apellido = $_POST["modApellido"];
+  $objModEnfermero-> tipoDocumento = $_POST["modTipoDocumento"];
+  $objModEnfermero-> documento = $_POST["modDocumento"];
+  $objModEnfermero->fecha = date('Y-m-d', strtotime($_POST["modFechaN"]));
+  
+  $objModEnfermero-> telefono = $_POST["modTelefono"];
+  $objModEnfermero-> ctrEditarE();
+}
+
+
+
+if(isset($_POST["idEnfermero"])){
+
+ $objEliminarEnfermero = new enfermeroControl();
+ $objEliminarEnfermero ->idEnfermero = $_POST["idEnfermero"];
+ $objEliminarEnfermero->ctrEliminarE();
+
+
+}

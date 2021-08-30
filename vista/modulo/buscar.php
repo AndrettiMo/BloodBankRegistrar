@@ -84,7 +84,7 @@
 
     <div class="form-group">
       <label for="lblFecha">Fecha de nacimiento:</label>
-      <input type="date" class="form-control"   id="txtModFechaE" min="1960-01-01">
+      <input type="date" class="form-control"   id="txtModFechaE" >
     </div>
 
     <div class="form-group">
@@ -92,13 +92,10 @@
       <input type="text" class="form-control"   id="txtModTelefonoE" >
     </div>
     
-    <div class="form-group">
-      <label for="lblContraseña">Contraseña:</label>
-      <input type="text" class="form-control"   id="txtModContraseñaE" >
-    </div>
+   
         </div>
         <div class="modal-footer">
-        <button id="btnModificar"type="button" class="btn btn-primary">Modificar</button>
+        <button id="btnModificar" type="button" class="btn btn-primary">Modificar</button>
         </div>
       </div>
       

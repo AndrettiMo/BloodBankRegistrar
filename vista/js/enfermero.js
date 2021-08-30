@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  cargarEnfermero();
+  
 
 
     $("#btnRegistroE").click(function(){
@@ -12,9 +12,6 @@ $(document).ready(function(){
       var fechaN = $("#txtFechaE").val();
       var telefono = $("#txtTelefonoE").val();
       var contrasena = $("#txtContraseñaE").val();
-
-     
-
        
       var objData = new FormData();
       

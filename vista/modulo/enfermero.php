@@ -3,7 +3,6 @@
 <div class="row">
 <div class="col-lg-4">
 
-<h2>Vertical (basic) form</h2>
   <form action="">
     <div class="form-group">
       <label for="lblNombre">Nombre:</label>

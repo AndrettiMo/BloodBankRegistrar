@@ -46,13 +46,62 @@ class enfermeroModelo{
     
     public static function mdlListarE(){
 
-        $objRespuesta = conexion::conectar()->prepare("SELECT  nombreEnfermero,apellidoEnfermero,tipoDocumento,numeroDocumento,fechaNacimiento, telefono from enfermero");
+        $objRespuesta = conexion::conectar()->prepare("SELECT  idEnfermero,nombreEnfermero,apellidoEnfermero,tipoDocumento,numeroDocumento,fechaNacimiento, telefono from enfermero");
         $objRespuesta->execute();
         $objListarEnfermero=$objRespuesta->fetchAll();
         $objRespuesta=null;
         return $objListarEnfermero;
 
    }
+
+   
+
+
+
+public static function mdlEditarE($idEnfermero,$nombre,$apellido,$tipoDocumento,$documento,$fecha,$telefono){
+   
+
+$mensaje = "";
+try {
+    $objRespuesta = Conexion :: conectar()->prepare("UPDATE enfermero SET nombreEnfermero ='$nombre', apellidoEnfermero= '$apellido', tipoDocumento= '$tipoDocumento',numeroDocumento ='$documento', fechaNacimiento='$fecha', telefono = '$telefono' WHERE idEnfermero='$idEnfermero'");          
+    
+    if ($objRespuesta->execute()) {
+        $mensaje = "ok";
+    } else {
+        $mensaje = "error";
+    }
+
+    $objRespuesta=null;
+} catch (Exception $e) {
+    $mensaje = $e;
+}
+
+return $mensaje;  
+     
+
+}
+
+
+public static function mdlEliminarE($idEnfermero){
+          
+    $mensaje ="";
+    try {
+       $objRespuesta = Conexion::conectar()->prepare("DELETE From enfermero WHERE idEnfermero='$idEnfermero'");
+       
+
+       if ($objRespuesta->execute()) {
+           $mensaje = "ok";
+       } else {
+           $mensaje = "error";
+       }
+
+       $objRespuesta=null;
+   } catch (Exception $e) {
+       $mensaje = $e;
+   }
+
+   return $mensaje;
+}
 
 
 

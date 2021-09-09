@@ -6,7 +6,7 @@ class conexion{
     public static function conectar(){
      
         $nombreServidor="localhost";
-        $baseDatos="bloodBank";
+        $baseDatos="bloodBankbd";
         $usuarioServidor="root";
         $password="";
 

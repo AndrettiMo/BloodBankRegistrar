@@ -23,15 +23,26 @@
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <!--  <link rel='stylesheet' type='text/css' media='screen' href=''>-->
+
+
+ 
+
+
+
+
+   <link rel='stylesheet' type='text/css' media='screen' href='vista/css/pagina.css'>
+   <link rel='stylesheet' type='text/css' media='screen' href='vista/css/recoleccion.css'>
+  
 
   <script src='vista/js/enfermero.js'></script>
   <script src='vista/js/mostrar.js'></script>
   <script src='vista/js/donante.js'></script>
+  <script src='vista/js/mapa.js'></script>
 </head>
 
 <body>
 
+<img id="icono" src="imagenes/bank.png" />
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">

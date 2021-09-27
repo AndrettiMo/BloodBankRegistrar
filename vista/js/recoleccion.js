@@ -14,6 +14,8 @@ $(document).ready(function () {
 
         var objData = new FormData();
 
+        
+
         objData.append("recoleccion", recoleccion);
         objData.append("direccion", direccion);
         objData.append("fecha", fecha);
